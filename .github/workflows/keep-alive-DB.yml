@@ -1,0 +1,9 @@
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping projet 2 (Drum Brothers)
+        run: |
+          curl -s "https://gjrukkebdhgwpazydiyx.supabase.co/rest/v1/tour_data?select=*&limit=1" \
+            -H "apikey: sb_publishable_76NVqrsxYrTg0n6678h44A_PiJQ7__8" \
+            -H "Authorization: Bearer sb_publishable_76NVqrsxYrTg0n6678h44A_PiJQ7__8"
