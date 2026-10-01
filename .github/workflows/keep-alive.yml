@@ -14,9 +14,3 @@ jobs:
           curl -s "https://kbowsgoqftrrhunrspjp.supabase.co/rest/v1/tour_data?select=key&limit=1" \
             -H "apikey: sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj" \
             -H "Authorization: Bearer sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj"
-
-      - name: Ping projet 2
-        run: |
-          curl -s "https://<URL-DU-PROJET-2>.supabase.co/rest/v1/<UNE_TABLE>?select=*&limit=1" \
-            -H "apikey: sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj" \
-            -H "Authorization: Bearer sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj"
