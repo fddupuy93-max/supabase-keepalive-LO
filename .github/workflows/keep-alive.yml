@@ -1,16 +1,16 @@
-name: Supabase Keep-Alive
+name: Supabase Keep-Alive LO
 
 on:
   schedule:
-    - cron: '0 6 */3 * *'   # tous les 3 jours à 6h UTC
-  workflow_dispatch:         # permet de lancer manuellement pour tester
+    - cron: '0 6 * * *'   # tous les jours à 6h UTC
+  workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping projet 1 (Little Odetta)
+      - name: Ping Little Odetta
         run: |
-          curl -s "https://kbowsgoqftrrhunrspjp.supabase.co/rest/v1/tour_data?select=key&limit=1" \
-            -H "apikey: sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj" \
-            -H "Authorization: Bearer sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj"
+          curl -sf -o /dev/null -w "HTTP %{http_code}\n" \
+            "https://kbowsgoqftrrhunrspjp.supabase.co/rest/v1/tour_data?select=key&limit=1" \
+            -H "apikey: sb_publishable_bpo990Yamg-b90k5bpNHHA_jEPgcApj"
